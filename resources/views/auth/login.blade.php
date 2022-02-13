@@ -36,6 +36,8 @@
 
     {{-- <hr class="my-4"> --}}
     <button class="btn col-md-12 btn-primary btn-lg btn-block" type="submit">Login</button>
+    <br><br>
+    <span >Create Account ? <a href="/register" style="text-decoration: none;" class="text-primary"> Register Here !!!</a> OR <a href="/" style="text-decoration: none;" class="text-danger"> Back Home</a> </span>
 </form>
             
 @endsection
