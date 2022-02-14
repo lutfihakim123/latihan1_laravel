@@ -23,31 +23,31 @@
         <div class='mb-3 row'>
             <label for="nama" class='col-sm-4 col-form-label'>Nama</label>
             <div class='col-sm-8'>
-                <input type="text" name="nama" value="{{$customers->nama}}" class='form-control' id="nama">
+                <input type="text" name="nama" value="{{$customers->nama}}" class='form-control' id="nama" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="contact" class='col-sm-4 col-form-label'>Contact</label>
             <div class='col-sm-8'>
-                <input type="text" name="contact" value="{{$customers->contact}}" class='form-control' id="contact">
+                <input type="text" name="contact" value="{{$customers->contact}}" class='form-control' id="contact" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="email" class='col-sm-4 col-form-label'>Email</label>
             <div class='col-sm-8'>
-                <input type="email" name="email" value="{{$customers->email}}" class='form-control' id="email">
+                <input type="email" name="email" value="{{$customers->email}}" class='form-control' id="email" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="alamat" class='col-sm-4 col-form-label'>Alamat</label>
             <div class='col-sm-8'>
-                <input type="text" name="alamat" value="{{$customers->alamat}}"  class='form-control' id="alamat">
+                <input type="text" name="alamat" value="{{$customers->alamat}}"  class='form-control' id="alamat" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="tipe_diskon" class='col-sm-4 col-form-label'>Tipe Diskon</label>
             <div class='col-sm-8'>
-                <select class="form-select" name="tipe_diskon" id="tipe_diskon">
+                <select class="form-select" name="tipe_diskon" id="tipe_diskon" required>
                     <option value="persentage" {{ ($customers->tipe_diskon === 'persentage'  ) ? 'selected' : '' }} >Persentage</option>
                     <option value="fix_diskon" {{ ($customers->tipe_diskon === 'fix_diskon'  ) ? 'selected' : '' }}>Fix Diskon</option>
                 </select>
@@ -56,13 +56,13 @@
         <div class='mb-3 row'>
             <label for="diskon" class='col-sm-4 col-form-label'>Diskon</label>
             <div class='col-sm-8'>
-                <input type="text" name="diskon" value="{{$customers->diskon}}"  class='form-control' id="diskon">
+                <input type="text" name="diskon" value="{{$customers->diskon}}"  class='form-control' id="diskon" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="formFile" class="form-label col-sm-4">KTP</label>
             <div class="col-sm-8">
-                <input class="form-control" type="file" name="ktp" id="formFile">
+                <input class="form-control" type="file" name="ktp" id="formFile" required>
             </div>
         </div>
         <div class="row mb-3">

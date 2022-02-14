@@ -4,7 +4,7 @@
 @if (session('status'))
     <h6 class="alert alert-success">{{  session('status') }}</h6>
 @endif
-<div class="card " style="background-color: whitesmoke;" >
+<div class="card " style="background-color: white;" >
     <div class="card-header">
         <div class="row">
             <div class="col-md-10">
@@ -33,7 +33,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                            <a href="{{ url('items/edit_items/'.$item->id)  }}" class="btn btn-primary btn-sm ">Edit</a>
+                            <a href="{{ url('items/edit_items/'.$item->id)  }}" class="btn btn-success btn-sm ">Edit</a>
                         </form>
                     </div>
                 </div>

@@ -22,13 +22,13 @@
         <div class='mb-3 row'>
             <label for="tanggal_transaksi" class='col-sm-4 col-form-label'>Tanggal Transaksi</label>
             <div class='col-sm-8'>
-                <input type="date" name="tanggal_transaksi" class='form-control' id="tanggal_transaksi">
+                <input type="date" name="tanggal_transaksi" class='form-control' id="tanggal_transaksi" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="customer" class='col-sm-4 col-form-label'>Customer</label>
             <div class='col-sm-8'>
-                <select class="form-select customer" name="customer" id="customer">
+                <select class="form-select customer" name="customer" id="customer" required>
                     <option selected>Chosee Customers ... </option>
                     @foreach ($customers as $customer)
                     <option   value="{{ $customer->id }}">{{ $customer->nama }}</option>
@@ -39,7 +39,7 @@
         <div class='mb-3 row'>
             <label for="item" class='col-sm-4 col-form-label'>Items</label>
             <div class='col-sm-8'>
-                <select class="form-select" name="item" id="item">
+                <select class="form-select" name="item" id="item" required>
                     <option selected>Chosee Items </option>
                     @foreach ($items as $item)
                     <option  value="{{ $item->id }}">{{ $item->item_name }}</option>
@@ -51,25 +51,25 @@
         <div class='mb-3 row'>
             <label for="qty" class='col-sm-4 col-form-label'>Qty</label>
             <div class='col-sm-8'>
-                <input type="text" name="qty" class='form-control' id="qty">
+                <input type="text" name="qty" class='form-control' id="qty" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="total_diskon" class='col-sm-4 col-form-label'>Total Diskon</label>
             <div class='col-sm-8'>
-                <input type="text" readonly name="total_diskon" class='form-control' id="total_diskon">
+                <input type="text" readonly name="total_diskon" class='form-control' id="total_diskon" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="total_harga" class='col-sm-4 col-form-label'>Total Harga</label>
             <div class='col-sm-8'>
-                <input type="text" readonly name="total_harga" class='form-control' id="total_harga">
+                <input type="text" readonly name="total_harga" class='form-control' id="total_harga" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="total_bayar" class='col-sm-4 col-form-label'>Total Bayar</label>
             <div class='col-sm-8'>
-                <input type="text" name="total_bayar" class='form-control' id="total_bayar">
+                <input type="text" name="total_bayar" class='form-control' id="total_bayar" required>
             </div>
         </div>
         <div class='mb-3 row'>
@@ -109,7 +109,6 @@
                                 var total_diskon = diskon ;
                             }
                             var total_harga = (price * qty) - total_diskon;
-                            // console.log(total_diskon);
                             $('#total_diskon').val(total_diskon);
                             $('#total_harga').val(total_harga);
                         },

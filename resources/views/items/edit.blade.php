@@ -22,31 +22,31 @@
         <div class='mb-3 row'>
             <label for="item_name" class='col-sm-4 col-form-label'>Item Name</label>
             <div class='col-sm-8'>
-                <input type="text" name="item_name" value="{{$items->item_name}}" class='form-control' id="item_name">
+                <input type="text" name="item_name" value="{{$items->item_name}}" class='form-control' id="item_name" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="unit" class='col-sm-4 col-form-label'>Unit (Kg)</label>
             <div class='col-sm-8'>
-                <input type="text" name="unit" value="{{$items->unit}}" class='form-control' id="unit">
+                <input type="text" name="unit" value="{{$items->unit}}" class='form-control' id="unit" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="stock" class='col-sm-4 col-form-label'>Stock</label>
             <div class='col-sm-8'>
-                <input type="text" name="stock" value="{{$items->stock}}" class='form-control' id="stock">
+                <input type="text" name="stock" value="{{$items->stock}}" class='form-control' id="stock" required>
             </div>
         </div>
         <div class='mb-3 row'>
             <label for="price" class='col-sm-4 col-form-label'>Price</label>
             <div class='col-sm-8'>
-                <input type="text" name="price" value="{{$items->price}}" class='form-control' id="price">
+                <input type="text" name="price" value="{{$items->price}}" class='form-control' id="price" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="formFile" class="form-label col-sm-4">Image</label>
             <div class="col-sm-8">
-                <input class="form-control" type="file" name="image" id="formFile">
+                <input class="form-control" type="file" name="image" id="formFile" required>
             </div>
         </div>
         <div class="row mb-3">
