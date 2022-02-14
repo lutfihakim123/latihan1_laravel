@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ $title; }}</title>
+        <title>@yield('title')</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <!-- Styles -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body class="antialiased">
 
@@ -22,10 +23,16 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link {{ ($active === "Home") ? 'active' : ''  }} " href="/"  >Home</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : ''  }} " href="/"  >Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link {{ ($active === "User") ? 'active' : ''  }}" href="/user">User Managament</a>
+                    <a class="nav-link {{ Request::is('items') ? 'active' : ''  }}" href="/items">Items</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ Request::is('customers') ? 'active' : ''  }}" href="/customers">Customers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ Request::is('sales') ? 'active' : ''  }}" href="/sales">Transaction</a>
                   </li>
                 </ul>
                 @auth
@@ -54,4 +61,5 @@
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
 </html>
